@@ -31,14 +31,17 @@ export default LoginPage;
 export const action = async function ({ request }) {
   const formData = await request.formData();
   const reqData = Object.fromEntries(formData.entries());
-  const res = await fetch("http://localhost:5000/admin/login", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    credentials: "include",
-    body: JSON.stringify(reqData),
-  });
+  const res = await fetch(
+    "http://server-assignment-03.vercel.app/admin/login",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      credentials: "include",
+      body: JSON.stringify(reqData),
+    }
+  );
   if (res.status === 401) {
     return alert("sai mat khau hoac email");
   }

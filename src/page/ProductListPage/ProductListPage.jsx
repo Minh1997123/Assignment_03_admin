@@ -57,9 +57,12 @@ const ProductListPage = function () {
 export default ProductListPage;
 
 export const loader = async function () {
-  const res = await fetch(`http://localhost:5000/admin/products`, {
-    credentials: "include",
-  });
+  const res = await fetch(
+    `http://server-assignment-03.vercel.app/admin/products`,
+    {
+      credentials: "include",
+    }
+  );
   if (res.status === 403) {
     alert("ban khong du quyen truy cap vao muc nay");
     return redirect("/");

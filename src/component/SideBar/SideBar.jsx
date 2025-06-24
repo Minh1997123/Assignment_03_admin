@@ -14,10 +14,13 @@ const SideBar = function () {
   useEffect(
     function () {
       const loginHandler = async function () {
-        const res = await fetch("http://localhost:5000/admin/login", {
-          method: "POST",
-          credentials: "include",
-        });
+        const res = await fetch(
+          "http://server-assignment-03.vercel.app/admin/login",
+          {
+            method: "POST",
+            credentials: "include",
+          }
+        );
         const resData = await res.json();
         if (res.status === 200) {
           dispatch(login(resData.email));
@@ -34,10 +37,13 @@ const SideBar = function () {
     [auth.isLogin]
   );
   const logOutHandler = async function () {
-    const res = await fetch("http://localhost:5000/admin/logout", {
-      method: "POST",
-      credentials: "include",
-    });
+    const res = await fetch(
+      "http://server-assignment-03.vercel.app/admin/logout",
+      {
+        method: "POST",
+        credentials: "include",
+      }
+    );
     if (res.status === 200) {
       dispatch(logout());
       navigate("/login");
