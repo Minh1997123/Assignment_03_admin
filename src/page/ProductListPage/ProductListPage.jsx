@@ -58,7 +58,7 @@ export default ProductListPage;
 
 export const loader = async function () {
   const res = await fetch(
-    `http://server-assignment-03.vercel.app/admin/products`,
+    `https://server-assignment-03.vercel.app/admin/products`,
     {
       credentials: "include",
     }

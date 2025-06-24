@@ -15,7 +15,7 @@ const SideBar = function () {
     function () {
       const loginHandler = async function () {
         const res = await fetch(
-          "http://server-assignment-03.vercel.app/admin/login",
+          "https://server-assignment-03.vercel.app/admin/login",
           {
             method: "POST",
             credentials: "include",
@@ -38,7 +38,7 @@ const SideBar = function () {
   );
   const logOutHandler = async function () {
     const res = await fetch(
-      "http://server-assignment-03.vercel.app/admin/logout",
+      "https://server-assignment-03.vercel.app/admin/logout",
       {
         method: "POST",
         credentials: "include",
