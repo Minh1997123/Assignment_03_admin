@@ -32,7 +32,7 @@ export const action = async function ({ request }) {
   const formData = await request.formData();
   const reqData = Object.fromEntries(formData.entries());
   const res = await fetch(
-    "http://server-assignment-03.vercel.app/admin/login",
+    "https://server-assignment-03.vercel.app/admin/login",
     {
       method: "POST",
       headers: {
